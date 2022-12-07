@@ -3,10 +3,9 @@
 
 const express = require('express');
 const router = express.Router();
-const auth = require('../middlewares/auth');
-const multer = require('../middlewares/multer_config');
-
-const userControl = require('../controllers/user');
+const auth = require('../middlewares/authentification.js');
+const multer = require('../middlewares/multer_config.js');
+const userControl = require('../controllers/user.js');
 
 router.post('/auth/signup', userControl.signup);
 router.post('/auth/login', userControl.login);

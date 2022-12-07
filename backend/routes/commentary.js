@@ -2,9 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const auth = require('../middlewares/auth');
-
-const commentaryControl = require('../controllers/commentary');
+const auth = require('../middlewares/authentification.js');
+const commentaryControl = require('../controllers/commentary.js');
 
 router.post('/commentary', auth, commentaryControl.commentaryPost);
 router.put('/commentary', auth, commentaryControl.modifyCommentary);
